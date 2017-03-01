@@ -1,0 +1,8 @@
+Use this option to run GSA on a gene list selected from the background, or all known genes.
+--- Only applicable to GSA methods testing over-representation of gene sets in a given gene list, such as Fisher's exact or chi-square test.
+--- Prepare the gene list (one gene per line) using one of the 3 identifier types:
+&nbsp;&nbsp;&nbsp;&nbsp;1. <a href="https://www.ncbi.nlm.nih.gov/gene", target="_black"><b>NCBI gene ID: </b></a>numbers only; no letters or other symbols (ex. <i>2308</i>).
+&nbsp;&nbsp;&nbsp;&nbsp;2. <a href="http://www.genenames.org", target="_black"><b>Official gene symbol: </b></a>case-sensitive; no synonyms (ex. <i>FOXO1</i>).
+&nbsp;&nbsp;&nbsp;&nbsp;3. <a href="http://ensembl.org", target="_black"><b>Ensembl gene ID: </b></a>ENSG, ENSMUSG, etc. followed by numbers (ex. <i>ENSG00000150907</i>).
+--- Copy/paste the gene list into the tex box on the right and upload it. Numbe of recognized gene identifiers will be reported.
+--- Uploading background genes is optional. GSA background could be all known genes of a species or all genes in a gene set colleciton. 

@@ -1,0 +1,7 @@
+Use this option to run GSA on a gene-level statistics, such as p value or mean difference.
+--- To test over-representation of gene sets, use filter on the right to select top genes.
+--- Prepare a table: 
+&nbsp;&nbsp;&nbsp;&nbsp;1. Each row has one gene and the first column must be unique gene identifier in one of 3 types: <a href="https://www.ncbi.nlm.nih.gov/gene", target="_black"><b>NCBI gene ID</b></a>, <a href="http://www.genenames.org", target="_black"><b>Official gene symbol</b></a>, or <a href="http://ensembl.org", target="_black"><b>Ensembl gene ID</b></a>.
+&nbsp;&nbsp;&nbsp;&nbsp;2. Table has 2 or more columns and its first row must be unique column names.
+&nbsp;&nbsp;&nbsp;&nbsp;3. At least one column must be a numeric vector of gene-level statistics.
+--- Save the table in a file with one of these extensions: <b><i>.txt, .tsv, .csv, .rds, .rdata, .rda, .xlsx, .xls, or .html</i></b>, and upload it for GSA.
