@@ -12,10 +12,10 @@ conditionalPanel(
     
     wellPanel(
       style = "background-color: #FFFFFF; width: 99%", 
-      h4(HTML("<font color='#D1B020'>Please review inputs for analysis</font>")),
+      # h4(HTML("<font color='#D1B020'>Please review inputs for analysis</font>")),
       div(
         style="display: inline-block; width: 48%; vertical-align: top",
-        h5(HTML('<b><u>Gene set</u></b>')),
+        h5(HTML('<font color="#D1B020"><b><u>Gene set</u></b></font>')),
         div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Source name :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
         div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.source')), br(),
@@ -34,7 +34,7 @@ conditionalPanel(
       ),
       div(
         style="display: inline-block; width: 48%; vertical-align: top",
-        h5(HTML('<b><u>User inputs</u></b>')),
+        h5(HTML('<font color="#D1B020"><b><u>User inputs</u></b></font>')),
         div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Analysis type :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
         div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.type')), br(),
@@ -64,9 +64,9 @@ conditionalPanel(
 
       div(
         style="display: inline-block; width: 25%", 
-        selectizeInput("step3ab.collection", h6(HTML("<b>Choose gene sets</b>")), choices=c(), width='200px'),
-        selectizeInput("step3ab.background", h6(HTML("<b>Choose background</b>")), choices=c(), width='200px'), 
-        selectizeInput("step3ab.method", h6(HTML("<b>Choose method</b>")), choices=ora.method, width='200px')
+        selectizeInput("step3ab.collection", h6(HTML("<b>Choose gene sets</b>")), choices=c(), width='90%'),
+        selectizeInput("step3ab.background", h6(HTML("<b>Choose background</b>")), choices=c(), width='90%'), 
+        selectizeInput("step3ab.method", h6(HTML("<b>Choose method</b>")), choices=ora.method, width='90%')
       ),
       div(style="display: inline-block; width: 1%"),
       div(
@@ -88,11 +88,11 @@ conditionalPanel(
       condition = 'input.step3_subset == false',
       div(
         style="display: inline-block; width: 27%", 
-        selectizeInput("step3c.collection", h6(HTML("<b>Choose gene sets</b>")), choices=c(), width='200px'),
-        selectizeInput("step3c.type", h6(HTML("<b>Choose variable type</b>")), choices=c(), width='200px'),
-        selectizeInput("step3c.direction", h6(HTML("<b>Choose direction column</b>")), choices=c(), width='200px'),
-        selectizeInput("step3c.rescale", h6(HTML("<b>Choose re-scaling method</b>")), choices=c(), width='200px'),
-        selectizeInput("step3c.method", h6(HTML("<b>Choose test method</b>")), choices=c(), width='200px')
+        selectizeInput("step3c.collection", h6(HTML("<b>Choose gene sets</b>")), choices=c(), width='90%'),
+        selectizeInput("step3c.type", h6(HTML("<b>Choose variable type</b>")), choices=c(), width='90%'),
+        selectizeInput("step3c.direction", h6(HTML("<b>Choose direction column</b>")), choices=c(), width='90%'),
+        selectizeInput("step3c.rescale", h6(HTML("<b>Choose re-scaling method</b>")), choices=c(), width='90%'),
+        selectizeInput("step3c.method", h6(HTML("<b>Choose test method</b>")), choices=c(), width='90%')
       ),
       div(style="display: inline-block; width: 1%"),
       div(
