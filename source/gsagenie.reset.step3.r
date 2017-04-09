@@ -1,5 +1,6 @@
 gsagenie.reset.step3 <- function(session, input, output, step1_status, step2_status, step3_status, event='') {
   if (event == 'go_back') {
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateCheckboxInput(session, 'step2_show', value=TRUE);
     updateCheckboxInput(session, 'step3_button', value=FALSE);
     updateCheckboxInput(session, 'step3_show', value=FALSE);

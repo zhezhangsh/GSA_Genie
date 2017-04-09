@@ -1,8 +1,10 @@
 gsagenie.reset.step2 <- function(session, input, output, step1_status, step2_status, event='') {
   if (event == 'go_back') {
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateCheckboxInput(session, 'step1_show', value=TRUE);
     updateCheckboxInput(session, 'step2_show', value=FALSE);
     updateCheckboxInput(session, 'step3_button', value=FALSE);
+    updateCheckboxInput(session, 'step1.multiple', value=FALSE);
     
     step2_status <- gsagenie.reset.step2(session, input, output, step1_status, step2_status, event='clear_all');
     
@@ -23,6 +25,7 @@ gsagenie.reset.step2 <- function(session, input, output, step1_status, step2_sta
     step2_status$table <- NULL;
     
     output$step2b.ui <- renderUI(fileInput('step2b.file', NULL));
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateCheckboxInput(session, 'step3_button', value=FALSE);
     updateTextAreaInput(session, 'step2a.text', value="");
     updateSelectizeInput(session, 'step2b.column', choices = '');
@@ -34,6 +37,7 @@ gsagenie.reset.step2 <- function(session, input, output, step1_status, step2_sta
     
     output$step2b.ui <- renderUI(fileInput('step2b.file', NULL));
     output$step2b.msg <- renderText(NULL);
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateTextAreaInput(session, 'step2a.text', value="");
     updateSelectizeInput(session, 'step2b.column', choices = '');
     updateCheckboxInput(session, 'step2b.filter', value=FALSE); 
@@ -52,6 +56,7 @@ gsagenie.reset.step2 <- function(session, input, output, step1_status, step2_sta
       updateCheckboxInput(session, 'step3_button', value=FALSE);
       updateSelectizeInput(session, 'step2b.column', choices = '');
     }
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateCheckboxInput(session, 'step2b.filter', value=FALSE); 
     updateTextAreaInput(session, 'step2a.text', value="");
     updateTextInput(session, 'input$step2b.cutoff', value='');

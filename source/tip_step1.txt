@@ -1,0 +1,5 @@
+Use this panel to select gene sets of a collection to be analyzed:
+--- Availability of collections is specific to species.
+--- Filter gene sets by specifying minimum and maximum number of genes per set.
+--- To save run time or use more statistical methods, select individual gene sets by highlighting rows.
+--- Check the "Choose multiple collections" box to select gene sets from multiple collections.

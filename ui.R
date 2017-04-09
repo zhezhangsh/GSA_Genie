@@ -5,6 +5,8 @@ source("/srv/shiny-server/gsagenie/preload.R");
 
 shinyUI(
   fluidPage(
+    tags$head(includeScript("google-analytics.js")),
+    
     theme = shinythemes::shinytheme("united"),
     
     tags$head(
@@ -39,25 +41,15 @@ shinyUI(
                    transition: all 20ms ease-out;}"))
     ),
     
-    # Always hidden, for condition flags
-    conditionalPanel(
-      condition='false', 
-      checkboxInput('detail', NULL, value=FALSE),
-      checkboxInput('step1_show',  NULL, value=TRUE),
-      checkboxInput('step2_show',  NULL, value=FALSE),
-      checkboxInput('step3_show',  NULL, value=FALSE),
-      checkboxInput('step3_button', NULL, value=FALSE),
-      checkboxInput('step3_subset', NULL, value=FALSE),
-      checkboxInput('run_button', NULL, value=FALSE),
-      checkboxInput('result_show', NULL, value=FALSE),
-      checkboxInput('result_plot', NULL, value=FALSE),
-      checkboxInput('result_button', NULL, value=FALSE)
-    ),
-    
     source('ui_title.R', local=TRUE)$value,
     
-    source('ui_step1.R', local=TRUE)$value,
+    conditionalPanel(
+      condition='input.start == false',
+      actionButton('step1.button', 'Start analysis', icon=icon('step-forward'), class='dC')
+    ),
     
+    source('ui_step1.R', local=TRUE)$value,
+
     conditionalPanel(
       condition='input.step1_show == true',
       actionButton('step2.button', 'Go forward to step 2', icon=icon('step-forward'), class='dC')
@@ -94,7 +86,6 @@ shinyUI(
     source('ui_result.R', local=TRUE)$value, 
     
     conditionalPanel(
-      # condition='true',
       condition='input.result_button == true',
       div(style="display: inline-block;", actionButton('result.back', 'Go back to step 3', icon=icon('step-backward'), class='dD')),
       div(style="display: inline-block; width: 10px;", h6()),
@@ -109,6 +100,23 @@ shinyUI(
         h5(HTML('<a href="http://awsomics.org" target="_blank">[Awsomics home]</a>'))),
     div(style="display: inline-block; width: 5px", h6()),
     div(style="display: inline-block; line-height:15px; font-family: Tagesschrift;", 
-        h5(HTML('<a href="mailto:zhangz@email.chop.edu">[Contact us]</a>')))
+        h5(HTML('<a href="mailto:zhangz@email.chop.edu">[Contact us]</a>'))),
+    
+    # Always hidden, for condition flags
+    conditionalPanel(
+      condition='false', 
+      checkboxInput('detail', NULL, value=FALSE),
+      checkboxInput('start', NULL, value=FALSE),
+      checkboxInput('step1_show',  NULL, value=FALSE),
+      checkboxInput('step2_show',  NULL, value=FALSE),
+      checkboxInput('step3_show',  NULL, value=FALSE),
+      checkboxInput('step3_button', NULL, value=FALSE),
+      checkboxInput('step3_subset', NULL, value=FALSE),
+      checkboxInput('run_button', NULL, value=FALSE),
+      checkboxInput('result_show', NULL, value=FALSE),
+      checkboxInput('result_plot', NULL, value=FALSE),
+      checkboxInput('result_split', NULL, value=FALSE),
+      checkboxInput('result_button', NULL, value=FALSE)
+    )
   ) # end of fluidPage
 ) # end of shinyUI

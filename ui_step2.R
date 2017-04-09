@@ -9,7 +9,7 @@ conditionalPanel(
   wellPanel(
     style = 'background-color: #1DB088',
     
-    h2(HTML("<font color='#FFFFFF' face='Tagesschrift'><b>Step 2. Upload gene list and background</b></font>")), 
+    h2(HTML("<font color='#FFFFFF' face='Tagesschrift'><b>Step 2. Upload user input</b></font>")), 
     
     tabsetPanel(
       type='tabs',

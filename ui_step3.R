@@ -8,7 +8,7 @@ conditionalPanel(
   wellPanel(
     style = 'background-color: #D1B020;',
     
-    h2(HTML("<font color='#FFFFFF' face='Tagesschrift'><b>Step 3. Run gene set analysis</b></font>")),
+    h2(HTML("<font color='#FFFFFF' face='Tagesschrift'><b>Step 3. Choose analysis method</b></font>")),
     
     wellPanel(
       style = "background-color: #FFFFFF; width: 99%", 
@@ -16,44 +16,44 @@ conditionalPanel(
       div(
         style="display: inline-block; width: 48%; vertical-align: top",
         h5(HTML('<font color="#D1B020"><b><u>Gene set</u></b></font>')),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Source name :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Species :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.source')), br(),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Collection name :'))),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.species')), br(),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Source :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.collection')), br(),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Species name :'))),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.source')), br(),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Collection :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.species')), br(),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('# of total gene sets :'))),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.collection')), br(),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('# of collections :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.gs0')), br(),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('# of selected gene sets :'))),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.gs0')), br(),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('# of total gene sets :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.gs1')), br()
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.gs1')), br()
       ),
       div(
-        style="display: inline-block; width: 48%; vertical-align: top",
+        style="display: inline-block; width: 50%; vertical-align: top",
         h5(HTML('<font color="#D1B020"><b><u>User inputs</u></b></font>')),
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Analysis type :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Analysis type :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.type')), br(),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.type')), br(),
         
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Background :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Background :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.background')), br(),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.background')), br(),
         
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Uploaded list (A) :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Uploaded list (A) :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.list')), br(),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.list')), br(),
 
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Gene-level statistics (B/C) :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Gene-level statistics (B/C) :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.stat')), br(),
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.stat')), br(),
 
-        div(style="display: inline-block; width: 36%; text-align: right; height: 0px;", h6(HTML('Selected by statistics (B) :'))),
+        div(style="display: inline-block; width: 40%; text-align: right; height: 0px;", h6(HTML('Selected by statistics (B) :'))),
         div(style="display: inline-block; width: 1%; height: 0px;", h6(HTML(''))),
-        div(style="display: inline-block; width: 60%; text-align: left; height: 0px;", htmlOutput('step3.smm.top'))
+        div(style="display: inline-block; width: 56%; text-align: left; height: 0px;", htmlOutput('step3.smm.top'))
       ), br(), br(),
       htmlOutput('step3.smm.overall')
     ),
@@ -99,7 +99,7 @@ conditionalPanel(
         style="display: inline-block; width: 70%; vertical-align: top;", 
         br(),
         wellPanel(
-          style='background-color: #FFFFFF; min-height: 360px;',
+          style='background-color: #FFFFFF;',
           h4(HTML('<font color="#D1B020"><b>', 'Tips:', '</b></font>')),
           div(
             style="display: inline-block; width: 95%",

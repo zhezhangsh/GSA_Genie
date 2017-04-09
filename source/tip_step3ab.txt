@@ -3,5 +3,6 @@ For each gene set, over-representation GSA tests <b><i><u>n1/N1 >> n0/N0</u></i>
 --- There are 3 options of background genes: provided by the user from <b>Step 2</b> when available; all known genes of the species; or all genes in the whole collection. The first option is usually preferred. 
 --- There are 3 options of statistical methods to test <b><i><u>n1/N1 >> n0/N0</u></i></b>
 &nbsp;&nbsp;&nbsp;&nbsp;1. <a href="https://en.wikipedia.org/wiki/Fisher's_exact_test", target="_black"><b>Fisher's exact test: </b></a>p value of each gene set is calculated based on <a href="https://en.wikipedia.org/wiki/Hypergeometric_distribution, target="_black"><b>hypergeometric distribution.</b></a>
-&nbsp;&nbsp;&nbsp;&nbsp;2. <a href="https://en.wikipedia.org/wiki/Chi-squared_test", target="_black"><b>Chi-square test: </b></a>p value of each gene set is estimated based on the asymptotic chi-squared distribution; using the R <i>chisq.test</i> function.
+&nbsp;&nbsp;&nbsp;&nbsp;2. <a href="https://en.wikipedia.org/wiki/Chi-squared_test", target="_black"><b>Chi-squared
+test: </b></a>p value of each gene set is estimated based on the asymptotic chi-squared distribution; using the R <i>chisq.test</i> function.
 &nbsp;&nbsp;&nbsp;&nbsp;3. <a href="http://www.socscistatistics.com/tests/ztest/", target="_black"><b>Proportion test: </b></a>convert the difference of two proportion to Z score and calculate the corresponding p value.

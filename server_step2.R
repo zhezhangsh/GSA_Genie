@@ -3,6 +3,7 @@ server_step2 <- function(input, output, session, step1_status, step2_status) {
   #######################################################################################################################
   ## Step 2
   observeEvent(input$step2.button, {
+    updateCheckboxInput(session, 'detail', value=FALSE);
     updateCheckboxInput(session, 'step1_show', value=FALSE);
     updateCheckboxInput(session, 'step2_show', value=TRUE);
   });

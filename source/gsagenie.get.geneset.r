@@ -1,5 +1,5 @@
 gsagenie.get.geneset<-function(pth, src, col, spe) { 
-  fn <- paste(pth, src, col, spe, 'metadata.rds', sep='/');
+  fn <- paste(pth, src, col, spe, 'metadata.rds', sep='/'); 
   if (file.exists(fn)) readRDS(fn) else NULL;
 }; 
 
